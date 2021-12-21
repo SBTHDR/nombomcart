@@ -1,7 +1,7 @@
 const Home = () => {
     return (
-        <div>
-            <h1>NombomCart</h1>
+        <div className="container mx-auto">
+            <h1 className="text-3xl text-center mt-3">NombomCart Ordering System</h1>
         </div>
     ) 
 }
