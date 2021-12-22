@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 const Products = () => {
 
     const [products, setProducts] = useState([]);
+    
     useEffect(() => {
         fetch('/api/products')
         .then(response => response.json())
