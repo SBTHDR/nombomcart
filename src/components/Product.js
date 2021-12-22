@@ -1,4 +1,4 @@
-const Product = () => {
+const Product = (props) => {
     return (
         <div>
             <img src="/images/peproni.png" alt="" />
