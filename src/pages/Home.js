@@ -7,11 +7,11 @@ const Home = () => {
                 <div className="container mx-auto flex items-center justify-between">
                     <div className="w-1/2">
                         <h5 className="text-lg">Feeling Hungry?</h5>
-                        <h1 className="text-3xl md:text-6xl font-bold">Food Delivery Easy!</h1>
-                        <button className="px-6 py-2 rounded-full text-white font-bold mt-4 bg-yellow-500 hover:bg-yellow-600">Order Now</button>
+                        <h1 className="text-3xl md:text-6xl font-bold mt-2">Easy Food Delivery!</h1>
+                        <button className="px-6 py-2 rounded-full text-white font-bold bg-orange-400 hover:bg-orange-500 mt-5">Order Now</button>
                     </div>
                     <div className="w-1/2">
-                        <img className="w-4/5" src="/images/pizza.png" alt="" />   
+                        <img className="w-5/6" src="/images/pizza.jpeg" alt="" />   
                     </div>
                 </div>
             </div>

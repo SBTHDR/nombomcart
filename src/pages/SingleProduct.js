@@ -18,13 +18,16 @@ const SingleProduct = () => {
     return (
         <div className="container mx-auto mt-12">
             <button className="mb-12 font-bold" onClick={ () => { history.goBack() } }>Back</button>
-            <div className="flex">
-                <img src={ product.image } alt="" />
-                <div className="ml-16">
-                    <h1 className="text-xl font-bold">{ product.name }</h1>
-                    <div className="text-md">{ product.size }</div>
-                    <div className="font-bold mt-2 text-md">{ product.price }</div>
-                    <button className="bg-yellow-500 py-1 px-8 rounded-full font-bold mt-4">Add to cart</button>
+            <div className="flex items-center">
+                <div className="w-1/2">
+                    <img src={ product.image } alt="" className="w-4/5"/>
+                </div>
+                <div className="w-1/2 ml-16">
+                    <h1 className="text-3xl font-bold mb-3">{ product.name }</h1>
+                    <p className="text-xl mb-5">{ product.description }</p>
+                    <span className="text-md bg-gray-200 py-1 px-4 rounded-full mb-5">Size: { product.size }</span>
+                    <div className="font-bold mt-2 text-xl text-green-500">BDT. { product.price }</div>
+                    <button className="bg-orange-400 hover:bg-orange-500 text-white py-1 px-8 rounded-full font-bold mt-4">Add to cart</button>
                 </div>
             </div>
         </div>
