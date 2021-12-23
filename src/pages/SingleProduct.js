@@ -18,11 +18,11 @@ const SingleProduct = () => {
     return (
         <div className="container mx-auto mt-12">
             <button className="mb-12 font-bold" onClick={ () => { history.goBack() } }>Back</button>
-            <div className="flex items-center">
-                <div className="w-1/2">
-                    <img src={ product.image } alt="" className="w-4/5"/>
+            <div className="sm:flex sm:items-center">
+                <div className="w-full sm:w-1/2">
+                    <img src={ product.image } alt="" className="w-full sm:w-4/5"/>
                 </div>
-                <div className="w-1/2 ml-16">
+                <div className="w-full text-center sm:text-left sm:w-1/2 ml-0 mt-3 sm:mt-0 sm:ml-16">
                     <h1 className="text-3xl font-bold mb-3">{ product.name }</h1>
                     <p className="text-xl mb-5">{ product.description }</p>
                     <span className="text-md bg-gray-200 py-1 px-4 rounded-full mb-5">Size: { product.size }</span>
