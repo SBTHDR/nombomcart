@@ -61,6 +61,17 @@ const Cart = () => {
         return sum;
     }
 
+    // Delete Item
+    const deleteItem = (productId) => {
+        const _cart = {...cart};
+        const qty = _cart.items[productId];
+        delete _cart.items[productId];
+        _cart.totalItems -= qty;
+        setCart(_cart);
+        const updatedProductsList = products.filter((product) => product._id !== productId);
+        setProducts(updatedProductsList);
+    }
+
     return (
         !products.length 
         ?
@@ -85,7 +96,7 @@ const Cart = () => {
                                         <button onClick={ () => { increment(product._id) } } className="bg-orange-400 px-4 py-2 rounded-full leading-none">+</button>
                                     </div>
                                     <span className="text-lg font-bold">BDT. { getSum(product._id, product.price) }</span>
-                                    <button className="bg-red-500 px-4 py-2 rounded-full leading-none text-white">Delete</button>
+                                    <button onClick={ () => { deleteItem(product._id) } } className="bg-red-500 px-4 py-2 rounded-full leading-none text-white">Delete</button>
                                 </div>
                             </li>
                         )
