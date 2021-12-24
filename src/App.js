@@ -13,12 +13,16 @@ const App = () => {
     
     useEffect(() => {
         const cart = window.localStorage.getItem('cart');
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        window.localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart])
 
     return (
         <>
             <Router>
-                {/* <CartContext.Provider value={  }> */}
+                <CartContext.Provider value={{ cart, setCart }}>
                     <Navigation />
                     <Switch>
                         <Route path="/" component={Home} exact></Route>
@@ -26,7 +30,7 @@ const App = () => {
                         <Route path="/products/:_id" component={SingleProduct}></Route>
                         <Route path="/cart" component={Cart}></Route>
                     </Switch>
-                {/* </CartContext.Provider> */}
+                </CartContext.Provider>
             </Router>
         </>
     )
