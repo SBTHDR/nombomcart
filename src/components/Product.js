@@ -4,6 +4,11 @@ const Product = (props) => {
 
     const { product } = props;
 
+    const addToCart = (event, product) => {
+        event.preventDefault();
+        console.log(product);
+    }
+
     return (
         <Link to={`/products/${product._id}`}>
             <div>
@@ -14,7 +19,7 @@ const Product = (props) => {
                 </div>
                 <div className="flex justify-between items-center mt-4">
                     <span className="text-lg font-bold text-green-500">BDT. { product.price }</span>
-                    <button className="bg-orange-400 hover:bg-orange-500 text-white py-1 px-4 rounded-full font-bold">Add</button>
+                    <button onClick={(e) => { addToCart(e, product) }} className="bg-orange-400 hover:bg-orange-500 text-white py-1 px-4 rounded-full font-bold">Add</button>
                 </div>
             </div>
         </Link>
