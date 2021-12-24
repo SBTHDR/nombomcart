@@ -40,9 +40,9 @@ const Cart = () => {
             <ul>
 
                 {
-                    products.map(product => {
+                    products.map(product => { 
                         return (
-                            <li className="">
+                            <li key={product._id}>
                                 <div className="flex items-center justify-between mt-5">
                                     <div className="flex items-center">
                                         <img className="w-20 bg-orange-400 p-1 mr-2" src={ product.image } alt="" />
