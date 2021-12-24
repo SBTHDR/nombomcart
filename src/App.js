@@ -13,6 +13,7 @@ const App = () => {
     
     useEffect(() => {
         const cart = window.localStorage.getItem('cart');
+        setCart(JSON.parse(cart));
     }, []);
 
     useEffect(() => {
