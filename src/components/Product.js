@@ -44,7 +44,7 @@ const Product = (props) => {
                     <h2 className="text-lg font-bold py-2">{ product.name }</h2>
                 </div>
                 <div className="flex justify-between items-center mt-4">
-                    <span className="text-lg font-bold text-green-500">BDT. { product.price }</span>
+                    <span className="text-lg">BDT. { product.price }</span>
                     <button 
                     disabled={ isAddToCart } 
                     onClick={(e) => { addToCart(e, product) }} 

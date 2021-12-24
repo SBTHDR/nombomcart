@@ -18,7 +18,7 @@ const Navigation = () => {
                     <li>
                         <Link to="/cart">
                             <div className="bg-orange-400 flex py-2 px-4 rounded-full">
-                                <span>{ cart.totalItems }</span>
+                                <span>{ cart.totalItems ? cart.totalItems : 0 }</span>
                                 <img className="ml-2" src="/images/cart.png" alt="" />
                             </div>
                         </Link>
