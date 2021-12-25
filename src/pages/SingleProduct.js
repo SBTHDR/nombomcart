@@ -47,7 +47,7 @@ const SingleProduct = () => {
 
     return (
         <div className="container mx-auto mt-12">
-            <button className="mb-12 font-bold" onClick={ () => { history.goBack() } }>Back</button>
+            
             <div className="sm:flex sm:items-center">
                 <div className="w-full sm:w-1/2">
                     <img src={ product.image } alt="" className="w-full sm:w-4/5"/>
@@ -57,6 +57,7 @@ const SingleProduct = () => {
                     <p className="text-xl mb-5">{ product.description }</p>
                     <span className="text-md bg-gray-200 py-1 px-4 rounded-full mb-5">Size: { product.size }</span>
                     <div className="font-bold mt-2 text-xl text-green-500">BDT. { product.price }</div>
+                    <button className="mr-3 bg-gray-300 py-1 px-8 rounded-full" onClick={ () => { history.goBack() } }>Back</button>
                     <button 
                     disabled={ isAddToCart } 
                     onClick={(e) => { addToCart(e, product) }} 
