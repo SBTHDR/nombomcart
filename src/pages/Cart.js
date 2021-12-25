@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../CartContext';
+import Swal from 'sweetalert2';
 
 const Cart = () => {
 
@@ -72,6 +73,13 @@ const Cart = () => {
         setProducts(updatedProductsList);
     }
 
+    // Order now
+    const orderNow = () => {
+        Swal.fire('Order placed successfully!');
+        setProducts([]);
+        setCart({});
+    }
+
     return (
         !products.length 
         ?
@@ -109,7 +117,7 @@ const Cart = () => {
                 Total Price: <b>{ total }</b>
             </div>
             <div className="text-right">
-                <button className="bg-orange-400 hover:bg-orange-500 px-4 py-2 rounded-full leading-none text-white mt-5">Order Now</button>
+                <button onClick={ orderNow } className="bg-orange-400 hover:bg-orange-500 px-4 py-2 rounded-full leading-none text-white mt-5">Order Now</button>
             </div>
         </div>
     )
