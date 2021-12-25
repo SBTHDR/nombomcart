@@ -28,7 +28,7 @@ const Cart = () => {
             setProducts(products);
             toggleFetchedCartItems(true);
         })
-    }, [cart]);
+    }, [cart, fetchedCartItems]);
 
     const getQty = (productId) => {
         return cart.items[ productId ];
